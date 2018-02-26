@@ -1,15 +1,15 @@
 const proteins = [	
 	{
 		menu : 'Turkey',
-		price : '10.75'
+		price : 10
 	},
 	{
 		menu : 'Chicken Breast',
-		price : '1.75'
+		price : 1
 	},
 	{
 		menu : 'Vegan Veggie',
-		price : '2.75'
+		price : 2
 	}
 ];
 

@@ -18,10 +18,7 @@ const inlineStyle = {
 	paper : {
 		display: 'inline-block',
   		margin: '16px 32px 16px 0',
-	},
-	checkbox: {
-    marginBottom: 16,
-  },
+	}	
 }
 
 class ProteinsBoard extends Component{

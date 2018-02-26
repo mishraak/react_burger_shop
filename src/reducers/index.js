@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import totalReducer from './totalReducer';
-import windowReducer from './windowReducer';
+
+//import windowReducer from './windowReducer';
+import choicesReducer from './choicesReducer';
 
 const rootReducer = combineReducers({
-  totalReducer : totalReducer,
-  windowReducer : windowReducer
+  choices : choicesReducer
 });
 
 export default rootReducer;

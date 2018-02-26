@@ -8,18 +8,12 @@ import reduxLogger from "redux-logger";
 import App from './components/App';
 import reducers from './reducers';
 
-const initialState = {
-	totalReducer : {
-		total : 0,
-		choices : []		
-	},
-	windowReducer : {
-		window : 0
-	}
-
+const initialState = {		
+	choices : []
 }
 
-const store = createStore(reducers, initialState, applyMiddleware(reduxLogger, reduxThunk));
+
+const store = createStore(reducers, applyMiddleware(reduxLogger, reduxThunk));
 
 ReactDOM.render(
   <Provider store={store}>
