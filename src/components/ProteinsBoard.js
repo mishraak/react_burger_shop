@@ -3,11 +3,11 @@ import constants from '../constants';
 import { Button } from 'react-bootstrap';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Paper from 'material-ui/Paper';
-import Checkbox from 'material-ui/Checkbox';
 import MenuItem from './MenuItem';
 
 //<ul>  { constants.proteins.map ( item =>  <h4 key={item.menu} > {item.menu }  {item.price} </h4>) }  </ul>	
 //<MenuItem key={item.menu} details="{menu : 'Hu' , price : '8.75'}" />												
+
 const inlineStyle = {
 	prevBtn  : {
 		float : "left"
@@ -16,8 +16,13 @@ const inlineStyle = {
 		float : "right"
 	},
 	paper : {
-		display: 'inline-block',
-  		margin: '16px 32px 16px 0',
+		display: 'inline-block',		
+  		margin: '20px 20px 20px 20px',
+  		height : '300px',
+  		width : '300px'  		
+	},
+	menuitem : {
+		width : "100px"
 	}	
 }
 
@@ -32,15 +37,43 @@ class ProteinsBoard extends Component{
 		return (
 			<div className="container">
 				<MuiThemeProvider>
-					<div className="row">
-						<div className="col-md-4">						
-							{
-								constants.proteins.map( item => 								
-									<MenuItem key={item.menu} details={item} />								
-								)
-							}
-						</div>					
-					</div>
+					<Paper style={inlineStyle.paper}>
+						<div className="row">
+							<div className="col-md-4">						
+								{
+									constants.proteins.map( item => 								
+										<MenuItem key={item.menu} details={item} />								
+									)
+								}
+							</div>					
+						</div>
+					</Paper>
+				</MuiThemeProvider>	
+				<MuiThemeProvider>
+					<Paper style={inlineStyle.paper}>
+						<div className="row">
+							<div className="col-md-4">						
+								{
+									constants.proteins_weights.map( item => 								
+										<MenuItem key={item.menu} details={item} />								
+									)
+								}
+							</div>					
+						</div>
+					</Paper>
+				</MuiThemeProvider>	
+				<MuiThemeProvider>
+					<Paper style={inlineStyle.paper}>
+						<div className="row">
+							<div className="col-md-4">						
+								{
+									constants.carbs.map( item => 								
+										<MenuItem key={item.menu} details={item} style={inlineStyle.menuitem} />								
+									)
+								}
+							</div>					
+						</div>
+					</Paper>
 				</MuiThemeProvider>		
 				<div className="row">
 					<input type="button" style={inlineStyle.prevBtn} className="btn btn-primary" value="Previous"/> 																								
