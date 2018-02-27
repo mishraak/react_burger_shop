@@ -4,6 +4,10 @@ const carbs = [
 		price : 10
 	},
 	{
+		menu : 'On a Bread',
+		price : 10
+	},
+	{
 		menu : 'Bowl Lettuce Blend',
 		price : 20
 	},

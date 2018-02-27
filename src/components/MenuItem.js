@@ -7,11 +7,19 @@ import Checkbox from 'material-ui/Checkbox';
 
 //<ul>  { constants.proteins.map ( item =>  <h4 key={item.menu} > {item.menu }  {item.price} </h4>) }  </ul>		
 // <h4 onClick={ this.updateCheck.bind(this) }> {this.props.details.menu }  {this.props.details.price} </h4>
+
+
+//label={`${this.props.details.menu} - ${this.props.details.price}` }
+
+
 const inlineStyle = {
   		checkbox: {
-    		marginBottom: 16,
-    		width : "100px"
+    		marginBottom: 16    		
+  		},
+  		block: {
+    		maxWidth: 250,
   		}
+  		
  }
 
 
@@ -38,11 +46,11 @@ class MenuItem extends Component {
 
 	render(){		
 		return(			
-				<div>
+				<div style={inlineStyle.block}>
 					<MuiThemeProvider>
-						<Checkbox
-				          label={`${this.props.details.menu} - ${this.props.details.price}` }
+						<Checkbox				          
 				          checked={this.state.checked}
+				          label={`${this.props.details.menu} - ${this.props.details.price}` }
 				          onCheck={this.updateCheck.bind(this)}
 				          style={inlineStyle.checkbox}
 			        	/>

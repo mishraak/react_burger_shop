@@ -23,6 +23,9 @@ const inlineStyle = {
 	},
 	menuitem : {
 		width : "100px"
+	},
+	label : {
+		width : "100%"
 	}	
 }
 
@@ -33,13 +36,22 @@ class ProteinsBoard extends Component{
 	    console.log("checked!");
   	}
 
+  	onNextClick(){
+  		this.props.history.push("/man");
+  		console.log("next clicked");
+  	}
+  	
+  	onPrevClick(){
+  		alert("Please select a proteins option!");
+  	}
+
 	render(){
 		return (
 			<div className="container">
 				<MuiThemeProvider>
 					<Paper style={inlineStyle.paper}>
 						<div className="row">
-							<div className="col-md-4">						
+							<div className="col-md-4" style={inlineStyle.label}>						
 								{
 									constants.proteins.map( item => 								
 										<MenuItem key={item.menu} details={item} />								
@@ -52,7 +64,7 @@ class ProteinsBoard extends Component{
 				<MuiThemeProvider>
 					<Paper style={inlineStyle.paper}>
 						<div className="row">
-							<div className="col-md-4">						
+							<div className="col-md-4" style={inlineStyle.label}>						
 								{
 									constants.proteins_weights.map( item => 								
 										<MenuItem key={item.menu} details={item} />								
@@ -65,7 +77,7 @@ class ProteinsBoard extends Component{
 				<MuiThemeProvider>
 					<Paper style={inlineStyle.paper}>
 						<div className="row">
-							<div className="col-md-4">						
+							<div className="col-md-4" style={inlineStyle.label}>						
 								{
 									constants.carbs.map( item => 								
 										<MenuItem key={item.menu} details={item} style={inlineStyle.menuitem} />								
@@ -75,9 +87,9 @@ class ProteinsBoard extends Component{
 						</div>
 					</Paper>
 				</MuiThemeProvider>		
-				<div className="row">
-					<input type="button" style={inlineStyle.prevBtn} className="btn btn-primary" value="Previous"/> 																								
-					<input type="button" style={inlineStyle.nextBtn} className="btn btn-primary" value="Next"/> 
+				<div className="row">					
+					<input type="button" style={inlineStyle.prevBtn} onClick={this.onPrevClick.bind(this)} className="btn btn-primary" value="Previous"/> 
+					<input type="button" style={inlineStyle.nextBtn} onClick={this.onNextClick.bind(this)} className="btn btn-primary" value="Next"/> 
 				</div>
 			</div>
 
