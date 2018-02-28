@@ -18,11 +18,8 @@ const inlineStyle = {
   		},
   		block: {
     		maxWidth: 250,
-  		}
-  		
+  		}  		
  }
-
-
 
 class MenuItem extends Component {  	
 	state = {

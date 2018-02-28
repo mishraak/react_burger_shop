@@ -5,6 +5,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Paper from 'material-ui/Paper';
 import MenuItem from './MenuItem';
 
+
+import { Link } from "react-router-dom";
+
 //<ul>  { constants.proteins.map ( item =>  <h4 key={item.menu} > {item.menu }  {item.price} </h4>) }  </ul>	
 //<MenuItem key={item.menu} details="{menu : 'Hu' , price : '8.75'}" />												
 
@@ -37,7 +40,7 @@ class ProteinsBoard extends Component{
   	}
 
   	onNextClick(){
-  		this.props.history.push("/man");
+  		this.props.history.push("/cheese");
   		console.log("next clicked");
   	}
   	
@@ -87,7 +90,10 @@ class ProteinsBoard extends Component{
 						</div>
 					</Paper>
 				</MuiThemeProvider>		
-				<div className="row">					
+				<div className="row">	
+
+											
+									
 					<input type="button" style={inlineStyle.prevBtn} onClick={this.onPrevClick.bind(this)} className="btn btn-primary" value="Previous"/> 
 					<input type="button" style={inlineStyle.nextBtn} onClick={this.onNextClick.bind(this)} className="btn btn-primary" value="Next"/> 
 				</div>
@@ -100,6 +106,14 @@ class ProteinsBoard extends Component{
 export default ProteinsBoard;
 
 /*
+
+<Link
+							to="/cheese"
+							className="btn-floating btn-large green"
+						>
+							<i className="material-icons">add</i>
+						</Link>	
+
 
 
 						<Paper style={inlineStyle.paper}>
