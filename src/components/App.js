@@ -4,10 +4,11 @@ import history from '../history';
 
 import Header from './Header';
 import ProteinsBoard from './ProteinsBoard';
-import CheeseBoard from './CheeseBoard';
+import ToppingsBoard from './ToppingsBoard';
 
 
 export default class App extends Component {
+
   render() {
     return (
       <div>
@@ -16,7 +17,7 @@ export default class App extends Component {
           <Header />
           <Switch>					
 					   <Route exact={true} path="/" component={ProteinsBoard} history={history} />
-             <Route exact={true} path="/cheese" component={CheeseBoard} history={history} />				
+             <Route exact={true} path="/toppings" component={ToppingsBoard} history={history} />				
           </Switch>
 				</div>
 			</BrowserRouter>

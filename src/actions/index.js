@@ -8,12 +8,18 @@ export const addMenu = function (menu) {
 	};
 }
 	
-
 export const removeMenu = function (menu) {
 	console.log("removeMenu called");
 	return {
 		type : 'REMOVE_MENU',
 		payload : menu
+	};
+}
+
+export const clearState = function () {
+	console.log("clearState called");
+	return {
+		type : 'CLEAR_STATE'		
 	};
 }
 
