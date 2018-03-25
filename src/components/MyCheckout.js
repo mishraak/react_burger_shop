@@ -21,6 +21,21 @@ class MyCheckout extends Component{
 		this.checkout = this.checkout.bind(this)	
 	}
 
+/*
+	componentWillMount(){
+		constants = {
+			carbs :  axios.get('http://192.168.1.98:8080/carbs')
+        		.then(res => {
+            		console.log('response from server logout');
+            		return res;
+        		})
+        		.catch(error => {
+            		console.log("This is error");
+            		return error;
+        	});
+		}
+	}
+*/
 	 checkout(){
 		
 		var sum=0;		

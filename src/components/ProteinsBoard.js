@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import constants from "../constants";
+
+
+
+
 import { Button } from "react-bootstrap";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import Paper from "material-ui/Paper";
@@ -34,6 +38,12 @@ const inlineStyle = {
 };
 
 class ProteinsBoard extends Component {
+
+
+
+
+
+
 	constructor(props) {
 		super(props);
 		//this.onPrevClick = this.haonPrevClickndler.bind(this);
