@@ -74,6 +74,19 @@ class MenuItem extends Component {
 	    			});
 				}
 	    	}
+	    	else if(this.props.uniqueId.substr(0, this.props.uniqueId.indexOf('-'))==="toppings") {
+	    		if(this.props.choices.choices.some(function (v) { return constants.toppings.indexOf(v) >= 0 })){
+					alert("Already contains a carbs choice, please check items from other options");											
+				}
+				else {
+					this.props.dispatch(addMenu(this.props.details));					
+					this.setState((oldState) => {
+	      						return {
+	        						checked: !oldState.checked,
+	      						};
+	    			});
+				}
+	    	}
 	    }
 	    else {
 	    	this.props.dispatch(removeMenu(this.props.details));

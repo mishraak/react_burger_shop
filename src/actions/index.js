@@ -24,6 +24,15 @@ export const clearState = function () {
 }
 
 
+export const checkout = function (menu) {	
+	console.log("checkout called");
+	console.log(menu);	
+	return {
+		type : 'CHECKOUT',
+		payload : menu		
+	};
+}
+
 export const windowReducer = function () {
 	return {
 		type : 'INCREMENT_WINDOW',
