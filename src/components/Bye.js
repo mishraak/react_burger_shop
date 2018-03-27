@@ -46,7 +46,7 @@ class Bye extends Component {
 					
 				<StripeCheckout
         			token={this.onToken}
-        		stripeKey="pk_test_fYz3ImcMfuKcqdLFdQrLudRJ"
+        		stripeKey="<GET YOUR OWN API KEY, SMARTY!!!>"
       				/>
 
 
